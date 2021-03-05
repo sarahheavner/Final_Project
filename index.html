@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Air Quality Vs. Poverty</title>
+
+  <!--bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!--CSS-->
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+</head>
+
+<body>
+    <!--jumbotron-->
+    <div class="wrapper">
+      <div class="container-fluid">
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h1 class="display-4">Air Quality Vs. Poverty</h1>
+            <p class="lead">Data Visualizations for Air Quality and Poverty Levels in US Counties</p>
+          </div>
+        </div>
+        
+      </div>
+      <div class="row">
+        <div class="col-md-11">
+        <div class="maintext">
+          <h4>Overview</h4>
+          <p>The World Health Organization estimates that in 2016 91% of the world population lived in areas that did not meet air quality guidelines. 
+            The WHO also estimates that outdoor air pollution contributed to approximately 4.2 million premature deaths globally, with over 90% of those deaths occurring in low and middle income countries. 
+            Exposure to polluted air has been linked to respiratory and cardiovascular disease, as well as cancer.</p>
+          <p>The charts below plot various air quality data and poverty rates for counties within the United States based on data from the EPA and U.S Census Bureau. 
+            The purpose of the visualizations is to see if there is an obvious correlation between counties with poor air quality and poverty. 
+            Interestingly, the charts do not show an obvious relationship between counties with higher poverty and poor air quality.
+            It is important to remember that health is affected by many factors - lack of access to nutritious food, routine healthcare and clean water, inability to afford health insurance, and exposure to hazardous conditions at work, pre-existing or untreated health conditions- 
+            all of which can contribute to a person, particularly those experiencing poverty, being more susceptible to the effects of moderate to poor air quality conditions.
+            The charts are filtered by state and year for 2016 - 2019 and will update when a new state or year is selected from the dropdown menu.</p>
+          <br>
+          <h4>Chart Descriptions</h4>
+          <h6>Total AQI Days Per County</h6>
+          <p>This chart visualizes the total count of days with an air pollutant present for each county.</p>
+          <h6>Contaminant Breakdown Per County</h6>
+          <p>This chart visualizes the count of days that each of the main contaminants were present for each county in the selected state and year against the poverty rate.
+            *NOTE* Presence of an air contaminant means just that - it was present in the air.
+            It does not necessarily mean that air quality conditions were unhealthy or hazardous based on the classifications from the EPA.</p>
+          <h6>Count of Select AQI Classification Days Per County</h6>
+          <p>This chart visualizes the count of days per county that were classified as moderate, unhealthy for sensitive people, unhealthy, very unhealthy, or hazardous against the poverty rate. 
+            This chart does not specificy which contaminant was present at unhealthy or hazardous levels and does not include a count of days classified as good.
+          </p>
+          
+        </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">
+          <div class="well">
+            <h5>Data Filter<h5><hr>
+            <select id="selDataset" onchange="stateOptionChanged(this.value)"></select><br>
+            <select id="selDataset2" onchange="yearOptionChanged(this.value)"></select>
+          </div>
+        </div>
+
+        <div class="col-md-9">
+          <div class="chart">
+            <canvas id="polarArea" width="600" height="400"></canvas> <br>
+            <div id="bar"></div> <br>
+            <div id="line"></div>
+        </div>
+      </div>
+
+
+      
+
+
+    
+<!--chart.js-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+<!--d3-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+<!--plotly-->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<!--bootstrap-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!--javascript-->
+<script type="text/javascript" src="static/js/logic.js"></script>
+</body>
+</html>
