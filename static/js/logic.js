@@ -2,14 +2,14 @@ var currentState = "AL"
 var currentYear = "2019"
 
 // connect to json data file and console.log results
-d3.json("/clean_data/combineddata.json").then((data) => {
+d3.json("Resources/clean_data/combineddata.json").then((data) => {
   console.log(data);
 });
 
 // Use d3 to read json data and state abbreviations to dropdown
 function init () {
 //create list with unique state abbreviations 
-  d3.json("/clean_data/combineddata.json").then((data) => {
+  d3.json("Resources/clean_data/combineddata.json").then((data) => {
     var unique = [];
     var state = [];
     for (var i = 0; i < data.length; i++) {
@@ -43,7 +43,7 @@ function init () {
 
 //function to filter data by state for charts
 function chartData(stateData, chosenYear) {
-  d3.json("/clean_data/combineddata.json").then((data) => {
+  d3.json("Resources/clean_data/combineddata.json").then((data) => {
     //filter data by state
     var filterChart = data.filter((firstState) => firstState.us_state == stateData);
     //set result as variable and log in console
