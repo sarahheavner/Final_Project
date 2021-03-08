@@ -56,6 +56,47 @@ CREATE TABLE day_count2016 (
 	hazardous_days2016 TEXT	
 );
 
+CREATE TABLE pollutant_breakdown2019 (
+	days_co2019 TEXT,
+	days_no2_2019 TEXT,
+	days_ozone2019 TEXT,
+	days_so2_2019 TEXT,
+	days_pm2_2019 TEXT,
+	days_pm10_2019 TEXT
+);
+
+CREATE TABLE pollutant_breakdown2018 (
+	days_co2018 TEXT,
+	days_no2_2018 TEXT,
+	days_ozone2018 TEXT,
+	days_so2_2018 TEXT,
+	days_pm2_2018 TEXT,
+	days_pm10_2018 TEXT
+);
+
+CREATE TABLE pollutant_breakdown2017 (
+	days_co2017 TEXT,
+	days_no2_2017 TEXT,
+	days_ozone2017 TEXT,
+	days_so2_2017 TEXT,
+	days_pm2_2017 TEXT,
+	days_pm10_2017 TEXT
+);
+
+CREATE TABLE pollutant_breakdown2016 (
+	days_co2016 TEXT,
+	days_no2_2016 TEXT,
+	days_ozone2016 TEXT,
+	days_so2_2016 TEXT,
+	days_pm2_2016 TEXT,
+	days_pm10_2016 TEXT
+);
+
+
+
+
+
+
 
 
 
