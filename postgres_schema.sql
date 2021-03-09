@@ -125,7 +125,7 @@ CREATE TABLE avg_pollutant (
 );
 
 SELECT * FROM avg_day;
-SELECT  * FROM avg_pollutant;
+SELECT * FROM avg_pollutant;
 SELECT * FROM cancer_data;
 SELECT * FROM county;
 SELECT * FROM day_count2016;
