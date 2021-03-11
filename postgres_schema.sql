@@ -10,7 +10,7 @@ CREATE TABLE poverty (
 	poverty_percentage2018 TEXT,
 	poverty_percentage2017 TEXT,
 	poverty_percentage2016 TEXT,
-	average_poverty_percentage TEXT
+	avg_poverty_percentage TEXT
 );
 
 CREATE TABLE day_count2019 (
@@ -99,29 +99,29 @@ CREATE TABLE pollutant_breakdown2016 (
 
 CREATE TABLE cancer_data (
 	county_id TEXT,
-	percent_pop_per_100k TEXT,
+	pop_per_100k TEXT,
 	cancer_classification TEXT
 );
 
 CREATE TABLE avg_day (
 	county_id TEXT,
-	average_aqi_days TEXT,
-	average_good_days TEXT,
-	average_moderate_days TEXT,
-	average_unhealthy_sensitive_days TEXT,
-	average_unhealthy_days TEXT,
-	average_very_unhealthy_days TEXT,
-	average_hazardous_days TEXT
+	avg_aqi_days TEXT,
+	avg_good_days TEXT,
+	avg_moderate_days TEXT,
+	avg_unhealthy_sensitive_days TEXT,
+	avg_unhealthy_days TEXT,
+	avg_very_unhealthy_days TEXT,
+	avg_hazardous_days TEXT
 );
 
 CREATE TABLE avg_pollutant (
 	county_id TEXT,
-	average_co_days TEXT,
-	average_no2_days TEXT,
-	average_ozone_days TEXT,
-	average_so2_days TEXT,
-	average_pm2_days TEXT,
-	average_pm10_days TEXT
+	avg_co_days TEXT,
+	avg_no2_days TEXT,
+	avg_ozone_days TEXT,
+	avg_so2_days TEXT,
+	avg_pm2_days TEXT,
+	avg_pm10_days TEXT
 );
 
 SELECT * FROM avg_day;
@@ -137,16 +137,6 @@ SELECT * FROM pollutant_breakdown2017;
 SELECT * FROM pollutant_breakdown2018;
 SELECT * FROM pollutant_breakdown2019;
 SELECT * FROM poverty;
-
-
-
-
-
-
-
-
-
-
 
 
 
