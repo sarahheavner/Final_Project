@@ -21,10 +21,15 @@ p {
   margin-left: 5%;
 }
 
+/*chart area*/
+#polarArea {
+  margin-left: 25%;
+}
+
 /*sidebar*/
 /*filter box formatting*/
 .well {
-    border: 1px solid;
+    border: 0.5px solid;
     font-weight: bold;
     font-size: 10px;
     text-align: center;
@@ -32,7 +37,6 @@ p {
     padding-bottom: 10px;
     padding-left: 50px;
     padding-right: 51px;
-
 }
 
 #selDataset {
