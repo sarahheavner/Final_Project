@@ -77,6 +77,8 @@ function chartData(stateData) {
 
 
 
+
+
 //function to update charts when new state is selected
 function stateOptionChanged(stateData) {
     currentState = stateData
