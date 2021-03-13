@@ -1,12 +1,36 @@
-
-
-
+/*Chart description title*/
 h6 {
     font-weight: bold;
     font-size: 20px;
     text-align: center;
     padding-top: 15px;
 }
+
+
+/*body formatting*/
+/*title text*/
+h1 {
+  font-size: 45px;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 40px;
+}
+
+/*overview*/
+h4 {
+  font-size: 40px;
+  font-weight: bold; 
+  padding-top: 50px;
+  padding-left: 55px;
+}
+
+p {
+  font-size: 12px;
+  padding-top: 20px;
+  margin-left: 5%;
+}
+
+
 
 
 /*filter box formatting*/
@@ -16,7 +40,7 @@ h6 {
 
 
 .well {
-    border: 3px solid;
+    border: 2px solid;
     font-weight: bold;
     font-size: 10px;
     text-align: center;
@@ -38,19 +62,7 @@ h6 {
 
 
 /*body formatting*/
-body {
-    background-color: #f5f5f0;
-}
 
-.maintext {
-    padding-top: 20px;
-    padding-left: 50px;
-}
-
-.row {
-    padding-left: 65px;
-    padding-top: 30px;
-}
 
 
 
