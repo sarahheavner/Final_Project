@@ -178,6 +178,7 @@ function chartData(stateData, chosenYear) {
       y: coDays,
       name: "CO",
       type: "bar",
+      width: 0.75,
       marker: {
         color: "#d966ff",
       }
@@ -188,6 +189,7 @@ function chartData(stateData, chosenYear) {
       y: no2Days,
       name: "NO2",
       type: "bar",
+      width: 0.75,
       marker: {
         color: "#1a75ff",
       }
@@ -198,6 +200,7 @@ function chartData(stateData, chosenYear) {
       y: ozoneDays,
       name: "Ozone",
       type: "bar",
+      width: 0.75,
       marker: {
         color:  "#2eb82e",
       }
@@ -208,6 +211,7 @@ function chartData(stateData, chosenYear) {
       y: so2Days,
       name: "SO2",
       type: "bar",
+      width: 0.75,
       marker: {
         color: "#ffff1a",
       }
@@ -218,6 +222,7 @@ function chartData(stateData, chosenYear) {
       y: pm2Days,
       name: "PM2.5",
       type: "bar",
+      width: 0.75,
       marker: {
         color: "#ff6600",
       }
@@ -228,6 +233,7 @@ function chartData(stateData, chosenYear) {
       y: pm10Days,
       name: "PM10",
       type: "bar",
+      width: 0.75,
       marker: {
         color: "#ff1a1a",
       }
@@ -258,6 +264,9 @@ function chartData(stateData, chosenYear) {
     var data = [pm10trace, pm2trace, so2trace, ozonetrace, no2trace, cotrace, povertytrace, cancertrace];
 
     var layout = {
+      autosize: false,
+      width: 1000,
+      height: 500,
       barmode: "stack",
       title: "Contaminant Breakdown Per County",
       yaxis: {title: 'Days Contaminant Present'},
@@ -276,10 +285,21 @@ function chartData(stateData, chosenYear) {
     var povertytrace = {
       x: county,
       y: povertyPercent,
-      name: "Poverty Percentage",
+      name: "Poverty %",
       type: "scatter",
-      fill: 'tozeroy',
-      mode: "none"
+      marker: {
+        color: "black"
+      },
+    };
+
+    var cancertrace = {
+      x: county,
+      y: cancer_pop,
+      name: "Cancer Per 100K",
+      type: "scatter",
+      marker: {
+        color: "#000080"
+      },
     };
 
     var hazardousDaysTrace = {
@@ -324,7 +344,7 @@ function chartData(stateData, chosenYear) {
       yaxis: {title: "Days Per Classification"}
     }
 
-    var scatterdata = [povertytrace, hazardousDaysTrace, veryUnhealthyTrace, unhealthyTrace, unhealthySensitiveTrace]
+    var scatterdata = [povertytrace, cancertrace, hazardousDaysTrace, veryUnhealthyTrace, unhealthyTrace, unhealthySensitiveTrace]
 
     Plotly.newPlot('line', scatterdata, layout);
 

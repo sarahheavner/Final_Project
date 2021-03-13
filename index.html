@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Air Quality Vs. Poverty</title>
+  <title>Air Quality, Poverty, Lung Cancer</title>
 
   <!--bootstrap-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -15,15 +15,28 @@
 </head>
 
 <body>
-    <!--jumbotron-->
-    <div class="wrapper">
-      <div class="container-fluid">
-        <div class="jumbotron jumbotron-fluid">
-          <div class="container">
-            <h1 class="display-4">Air Quality, Poverty, and Lung Cancer</h1>
-            <p class="lead">Data Visualizations for Air Quality, Poverty Levels, and Lung Cancer diagnoses in US Counties</p>
+  <!-- Start of navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Plots
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="AQCancer.html">Avg Air Quality and Cancer</a>
+            <a class="dropdown-item" href="PovertyCancer.html">Avg Poverty and Cancer</a>
+            <a class="dropdown-item" href="#">Something else here</a>
           </div>
-        </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
         
       </div>
       <div class="row">
@@ -43,6 +56,7 @@
         </div>
         </div>
       </div>
+      <hr>
 
       <div class="row">
         <div class="col-md-2">
@@ -53,14 +67,14 @@
           </div>
         </div>
 
-        <div class="col-md-9">
+        <div class="col-md-8">
           <h6>Total AQI Days Per County</h6>
           <p>Total count of days with an air pollutant present at any readable amount for each county in the selected state and year.</p>
           <div class="chart">
-            <canvas id="polarArea" width="600" height="400"></canvas> <br>
+            <canvas id="polarArea" width="600" height="300"></canvas> <br>
             <h6>Contaminant Breakdown Per County</h6>
             <p>This chart visualizes the count of days that each of the main contaminants were present for each county in the selected state and year against the poverty rate.
-              *NOTE* Presence of an air contaminant means just that - it was present in the air.
+              *NOTE* Presence of an air contaminant means just that - it was present in the air.<br>
               It does not necessarily mean that air quality conditions were unhealthy or hazardous based on the classifications from the EPA.</p>  
             <div id="bar"></div> <br>
             <h6>Count of Select AQI Classification Days Per County</h6>
