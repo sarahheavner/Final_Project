@@ -50,7 +50,7 @@ function chartData(stateData, chosenYear) {
     var initialChart = filterChart;
     console.log(initialChart);
 
-    //create variable for barchart
+    //create empty lists for variables
     var county = [];
     var coDays = [];
     var no2Days = [];
@@ -58,8 +58,7 @@ function chartData(stateData, chosenYear) {
     var so2Days = [];
     var pm2Days = [];
     var pm10Days = [];
-
-    //create variable for linechart
+    var cancer_pop = [];
     var povertyPercent = [];
     var good_days = [];
     var moderate_days = [];
@@ -87,6 +86,7 @@ function chartData(stateData, chosenYear) {
         very_unhealthy_days.push(initialChart[i].very_unhealthy_days2019);
         hazardous_days.push(initialChart[i].hazardous_days2019);
         days_with_aqi.push(initialChart[i].days_with_aqi2019);
+        cancer_pop.push(initialChart[i].pop_per_100k);
       };
     }
 
@@ -107,6 +107,7 @@ function chartData(stateData, chosenYear) {
         very_unhealthy_days.push(initialChart[i].very_unhealthy_days2018);
         hazardous_days.push(initialChart[i].hazardous_days2018);
         days_with_aqi.push(initialChart[i].days_with_aqi2018);
+        cancer_pop.push(initialChart[i].pop_per_100k);
       };
     }
 
@@ -127,6 +128,7 @@ function chartData(stateData, chosenYear) {
         very_unhealthy_days.push(initialChart[i].very_unhealthy_days2017);
         hazardous_days.push(initialChart[i].hazardous_days2017);
         days_with_aqi.push(initialChart[i].days_with_aqi2017);
+        cancer_pop.push(initialChart[i].pop_per_100k);
       };
     }
 
@@ -146,7 +148,8 @@ function chartData(stateData, chosenYear) {
         unhealthy_days.push(initialChart[i].unhealthy_days2016);
         very_unhealthy_days.push(initialChart[i].very_unhealthy_days2016);
         hazardous_days.push(initialChart[i].hazardous_days2016);
-        days_with_aqi.push(initialChart[i].days_with_aqi2019);
+        days_with_aqi.push(initialChart[i].days_with_aqi2016);
+        cancer_pop.push(initialChart[i].pop_per_100k);
       };
     }
 
@@ -174,42 +177,60 @@ function chartData(stateData, chosenYear) {
       x: county,
       y: coDays,
       name: "CO",
-      type: "bar"
+      type: "bar",
+      marker: {
+        color: "#d966ff",
+      }
     };
 
     var no2trace = {
       x: county,
       y: no2Days,
       name: "NO2",
-      type: "bar"
+      type: "bar",
+      marker: {
+        color: "#1a75ff",
+      }
     };
 
     var ozonetrace = {
       x: county,
       y: ozoneDays,
       name: "Ozone",
-      type: "bar"
+      type: "bar",
+      marker: {
+        color:  "#2eb82e",
+      }
     };
 
     var so2trace = {
       x: county,
       y: so2Days,
       name: "SO2",
-      type: "bar"
+      type: "bar",
+      marker: {
+        color: "#ffff1a",
+      }
     };
 
     var pm2trace = {
       x: county,
       y: pm2Days,
       name: "PM2.5",
-      type: "bar"
+      type: "bar",
+      marker: {
+        color: "#ff6600",
+      }
     };
 
     var pm10trace = {
       x: county,
       y: pm10Days,
       name: "PM10",
-      type: "bar"
+      type: "bar",
+      marker: {
+        color: "#ff1a1a",
+      }
     };
 
     var povertytrace = {
@@ -223,7 +244,19 @@ function chartData(stateData, chosenYear) {
       },
     };
 
-    var data = [cotrace, no2trace, ozonetrace, so2trace,pm2trace, pm10trace, povertytrace];
+    var cancertrace = {
+      x: county,
+      y: cancer_pop,
+      yaxis: 'y2',
+      name: "Cancer Per 100K",
+      type: "scatter",
+      marker: {
+        color: "#000080"
+      },
+    };
+
+    // var data = [cotrace, no2trace, ozonetrace, so2trace,pm2trace, pm10trace, povertytrace, cancertrace];
+    var data = [pm10trace, pm2trace, so2trace, ozonetrace, no2trace, cotrace, povertytrace, cancertrace];
 
     var layout = {
       barmode: "stack",
