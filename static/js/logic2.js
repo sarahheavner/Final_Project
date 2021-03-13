@@ -81,16 +81,18 @@ function chartData(stateData) {
       y: avg_aqi_days,
       name: "AQI Days",
       type: "bar",
+      marker: {
+        color: "blue"
+      }
     };
 
     var pop_per_100k_trace = {
       x: county,
       y: pop_per_100k,
-      yaxis: 'y2',
       name: "Pop Per 100K",
-      type: "scatter",
+      type: "bar",
       marker: {
-        color: "black",
+        color: "red",
       }, 
     };
 
@@ -98,15 +100,10 @@ function chartData(stateData) {
 
     var layout = {
       autosize: false,
-      width: 1000,
+      width: 500,
       height: 500,
       title: "Average AQI Days And Cancer Diagnoses per 100K",
-      yaxis: {title: 'Average AQI Days'},
-      yaxis2: {
-        // title: 'Poverty %',
-        overlaying: 'y',
-        side: 'right'
-      }
+      yaxis: {title: 'Average AQI Days and Cancer Rates'},
     };
 
     Plotly.newPlot("bar1", data, layout);
