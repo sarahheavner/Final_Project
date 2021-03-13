@@ -20,8 +20,8 @@
       <div class="container-fluid">
         <div class="jumbotron jumbotron-fluid">
           <div class="container">
-            <h1 class="display-4">Air Quality Vs. Poverty</h1>
-            <p class="lead">Data Visualizations for Air Quality and Poverty Levels in US Counties</p>
+            <h1 class="display-4">Air Quality, Poverty, and Lung Cancer</h1>
+            <p class="lead">Data Visualizations for Air Quality, Poverty Levels, and Lung Cancer diagnoses in US Counties</p>
           </div>
         </div>
         
@@ -39,19 +39,7 @@
             It is important to remember that health is affected by many factors - lack of access to nutritious food, routine healthcare and clean water, inability to afford health insurance, and exposure to hazardous conditions at work, pre-existing or untreated health conditions- 
             all of which can contribute to a person, particularly those experiencing poverty, being more susceptible to the effects of moderate to poor air quality conditions.
             The charts are filtered by state and year for 2016 - 2019 and will update when a new state or year is selected from the dropdown menu.</p>
-          <br>
-          <h4>Chart Descriptions</h4>
-          <h6>Total AQI Days Per County</h6>
-          <p>This chart visualizes the total count of days with an air pollutant present for each county.</p>
-          <h6>Contaminant Breakdown Per County</h6>
-          <p>This chart visualizes the count of days that each of the main contaminants were present for each county in the selected state and year against the poverty rate.
-            *NOTE* Presence of an air contaminant means just that - it was present in the air.
-            It does not necessarily mean that air quality conditions were unhealthy or hazardous based on the classifications from the EPA.</p>
-          <h6>Count of Select AQI Classification Days Per County</h6>
-          <p>This chart visualizes the count of days per county that were classified as moderate, unhealthy for sensitive people, unhealthy, very unhealthy, or hazardous against the poverty rate. 
-            This chart does not specificy which contaminant was present at unhealthy or hazardous levels and does not include a count of days classified as good.
-          </p>
-          
+          <br>          
         </div>
         </div>
       </div>
@@ -66,9 +54,19 @@
         </div>
 
         <div class="col-md-9">
+          <h6>Total AQI Days Per County</h6>
+          <p>Total count of days with an air pollutant present at any readable amount for each county in the selected state and year.</p>
           <div class="chart">
             <canvas id="polarArea" width="600" height="400"></canvas> <br>
+            <h6>Contaminant Breakdown Per County</h6>
+            <p>This chart visualizes the count of days that each of the main contaminants were present for each county in the selected state and year against the poverty rate.
+              *NOTE* Presence of an air contaminant means just that - it was present in the air.
+              It does not necessarily mean that air quality conditions were unhealthy or hazardous based on the classifications from the EPA.</p>  
             <div id="bar"></div> <br>
+            <h6>Count of Select AQI Classification Days Per County</h6>
+            <p>This chart visualizes the count of days per county that were classified as moderate, unhealthy for sensitive people, unhealthy, very unhealthy, or hazardous against the poverty rate. 
+            This chart does not specificy which contaminant was present at unhealthy or hazardous levels and does not include a count of days classified as good.
+            </p>
             <div id="line"></div>
         </div>
       </div>

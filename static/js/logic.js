@@ -255,7 +255,6 @@ function chartData(stateData, chosenYear) {
       },
     };
 
-    // var data = [cotrace, no2trace, ozonetrace, so2trace,pm2trace, pm10trace, povertytrace, cancertrace];
     var data = [pm10trace, pm2trace, so2trace, ozonetrace, no2trace, cotrace, povertytrace, cancertrace];
 
     var layout = {
