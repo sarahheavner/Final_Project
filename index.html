@@ -12,20 +12,19 @@
   <!--CSS-->
   <link rel="stylesheet" type="text/css" href="static/css/style.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
 </head>
 
 <body>
   <!-- Sidebar -->
-  <div class="w3-sidebar w3-dark-grey w3-bar-block" style="width:12.5%">
+  <div class="w3-sidebar w3-dark-grey w3-bar-block w3-small"  style="width:12.5%">
     <h3 class="w3-bar-item"></h3>
-    <a href="index.html" class="w3-bar-item w3-button">Home</a>
-    <a href="AQcancer.html" class="w3-bar-item w3-button">Avg AQ And Cancer</a>
-    <a href="PovertyCancer.html" class="w3-bar-item w3-button">Avg Poverty And Cancer</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-16">Home</a>
+    <a href="AQcancer.html" class="w3-bar-item w3-button w3-padding-16">Avg AQ & Cancer</a>
+    <a href="PovertyCancer.html" class="w3-bar-item w3-button w3-padding-16">Avg Poverty & Cancer</a>
     <div class="row">
         <div class="well">
           <h5>Data Filter<h5><hr>
-          <select id="selDataset" onchange="stateOptionChanged(this.value)"></select><br><br>
+          <select id="selDataset" onchange="stateOptionChanged(this.value)"></select><br>
           <select id="selDataset2" onchange="yearOptionChanged(this.value)"></select>
         </div>
       </div>
@@ -54,7 +53,7 @@
       <div class="chart area">
         <h4>Total AQI Days Per County</h4>
         <p>Total count of days with an air pollutant present at any readable amount for each county in the selected state and year.</p>
-        <div class="chart-container" style="position: relative; height:40vh; width:80vw">
+        <div class="chart-container" style="position: relative; height:20vh; width:55vw">
           <canvas id="polarArea"></canvas> <br>
           <h4>Contaminant Breakdown Per County</h4>
           <p>This chart visualizes the count of days that each of the main contaminants were present for each county in the selected state and year against the poverty rate.
