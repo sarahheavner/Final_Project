@@ -1,16 +1,7 @@
-/*Chart description title*/
-h6 {
-    font-weight: bold;
-    font-size: 20px;
-    text-align: center;
-    padding-top: 15px;
-}
-
-
 /*body formatting*/
 /*title text*/
 h1 {
-  font-size: 45px;
+  font-size: 75px;
   text-align: center;
   font-weight: bold;
   padding-top: 40px;
@@ -18,7 +9,7 @@ h1 {
 
 /*overview*/
 h4 {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: bold; 
   padding-top: 50px;
   padding-left: 55px;
@@ -30,24 +21,18 @@ p {
   margin-left: 5%;
 }
 
-
-
-
+/*sidebar*/
 /*filter box formatting*/
-.panel {
-    background-color: #d6d6c2;
-}
-
-
 .well {
-    border: 2px solid;
+    border: 1px solid;
     font-weight: bold;
     font-size: 10px;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 50px;
+    padding-right: 51px;
+
 }
 
 #selDataset {
@@ -59,9 +44,6 @@ p {
 #selDataset2 {
     font-size: 15px;
 }
-
-
-/*body formatting*/
 
 
 
