@@ -181,6 +181,7 @@ function chartData(stateData, chosenYear) {
       width: 0.75,
       marker: {
         color: "#d966ff",
+        opacity: 0.6,
       }
     };
 
@@ -192,6 +193,7 @@ function chartData(stateData, chosenYear) {
       width: 0.75,
       marker: {
         color: "#1a75ff",
+        opacity: 0.6,
       }
     };
 
@@ -203,6 +205,7 @@ function chartData(stateData, chosenYear) {
       width: 0.75,
       marker: {
         color:  "#2eb82e",
+        opacity: 0.6,
       }
     };
 
@@ -214,6 +217,7 @@ function chartData(stateData, chosenYear) {
       width: 0.75,
       marker: {
         color: "#ffff1a",
+        opacity: 0.6,
       }
     };
 
@@ -225,6 +229,7 @@ function chartData(stateData, chosenYear) {
       width: 0.75,
       marker: {
         color: "#ff6600",
+        opacity: 0.6,
       }
     };
 
@@ -236,6 +241,7 @@ function chartData(stateData, chosenYear) {
       width: 0.75,
       marker: {
         color: "#ff1a1a",
+        opacity: 0.6,
       }
     };
 
@@ -257,7 +263,7 @@ function chartData(stateData, chosenYear) {
       name: "Cancer Per 100K",
       type: "scatter",
       marker: {
-        color: "#000080"
+        color: "#ff0066"
       },
     };
 
@@ -265,13 +271,11 @@ function chartData(stateData, chosenYear) {
 
     var layout = {
       autosize: false,
-      width: 1000,
-      height: 500,
+      width: 1100,
+      height: 400,
       barmode: "stack",
-      title: "Contaminant Breakdown Per County",
       yaxis: {title: 'Days Contaminant Present'},
       yaxis2: {
-        // title: 'Poverty %',
         overlaying: 'y',
         side: 'right'
       }
