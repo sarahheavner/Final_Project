@@ -171,188 +171,6 @@ function chartData(stateData, chosenYear) {
     console.log(days_with_aqi);
 
     //inital charts
-    //stacked bar chart
-    //aqi days breakdown per county of filtered state 
-    var cotrace= {
-      x: county,
-      y: coDays,
-      name: "CO",
-      type: "bar",
-      width: 0.75,
-      marker: {
-        color: "#d966ff",
-        opacity: 0.6,
-      }
-    };
-
-    var no2trace = {
-      x: county,
-      y: no2Days,
-      name: "NO2",
-      type: "bar",
-      width: 0.75,
-      marker: {
-        color: "#1a75ff",
-        opacity: 0.6,
-      }
-    };
-
-    var ozonetrace = {
-      x: county,
-      y: ozoneDays,
-      name: "Ozone",
-      type: "bar",
-      width: 0.75,
-      marker: {
-        color:  "#2eb82e",
-        opacity: 0.6,
-      }
-    };
-
-    var so2trace = {
-      x: county,
-      y: so2Days,
-      name: "SO2",
-      type: "bar",
-      width: 0.75,
-      marker: {
-        color: "#ffff1a",
-        opacity: 0.6,
-      }
-    };
-
-    var pm2trace = {
-      x: county,
-      y: pm2Days,
-      name: "PM2.5",
-      type: "bar",
-      width: 0.75,
-      marker: {
-        color: "#ff6600",
-        opacity: 0.6,
-      }
-    };
-
-    var pm10trace = {
-      x: county,
-      y: pm10Days,
-      name: "PM10",
-      type: "bar",
-      width: 0.75,
-      marker: {
-        color: "#ff1a1a",
-        opacity: 0.6,
-      }
-    };
-
-    var povertytrace = {
-      x: county,
-      y: povertyPercent,
-      yaxis: 'y2',
-      name: "Poverty %",
-      type: "scatter",
-      marker: {
-        color: "black",
-      },
-    };
-
-    var cancertrace = {
-      x: county,
-      y: cancer_pop,
-      yaxis: 'y2',
-      name: "Cancer Per 100K",
-      type: "scatter",
-      marker: {
-        color: "#ff0066"
-      },
-    };
-
-    var data = [pm10trace, pm2trace, so2trace, ozonetrace, no2trace, cotrace, povertytrace, cancertrace];
-
-    var layout = {
-      autosize: false,
-      width: 1100,
-      height: 400,
-      barmode: "stack",
-      xaxis: {title: 'County'},
-      yaxis: {title: 'Days Contaminant Present'},
-      yaxis2: {
-        overlaying: 'y',
-        side: 'right'
-      }
-    };
- 
-    Plotly.newPlot("bar", data, layout);
-
-
-    //scatter plot
-    //count of days  with moderate to poor AQI vs poverty percentage for filtered stateData
-    // var povertytrace = {
-    //   x: county,
-    //   y: povertyPercent,
-    //   name: "Poverty %",
-    //   type: "scatter",
-    //   marker: {
-    //     color: "black"
-    //   },
-    // };
-
-    // var cancertrace = {
-    //   x: county,
-    //   y: cancer_pop,
-    //   name: "Cancer Per 100K",
-    //   type: "scatter",
-    //   marker: {
-    //     color: "#ff0066"
-    //   },
-    // };
-
-    // var hazardousDaysTrace = {
-    //   x: county,
-    //   y: hazardous_days,
-    //   name: "Hazardous Days",
-    //   type: "scatter",
-    //   mode: 'markers',
-    //   marker: {size: 12}
-    // };
-
-    // var veryUnhealthyTrace = {
-    //   x: county,
-    //   y: very_unhealthy_days,
-    //   name: "Very Unhealthy Days",
-    //   type: "scatter",
-    //   mode: 'markers',
-    //   marker: {size: 12}
-    // }
-
-    // var unhealthyTrace = {
-    //   x: county, 
-    //   y: unhealthy_days,
-    //   name: "Unhealthy Days",
-    //   type: "scatter", 
-    //   mode: 'markers',
-    //   marker: {size: 12}
-    // }
-
-    // var unhealthySensitiveTrace = {
-    //   x: county,
-    //   y: unhealthy_sensitive_days,
-    //   name: "Unhealthy Sensitive Days",
-    //   type: "scatter",
-    //   mode: 'markers',
-    //   marker: {size: 12}
-    // }
-
-
-    // layout = {
-    //   title: "Count of Unhealthy to Hazardous Days Per County",
-    //   yaxis: {title: "Days Per Classification"}
-    // }
-
-    // var scatterdata = [povertytrace, cancertrace, hazardousDaysTrace, veryUnhealthyTrace, unhealthyTrace, unhealthySensitiveTrace]
-
-    // Plotly.newPlot('line', scatterdata, layout);
-
 
     //polar area chart 
     //total AQI days
@@ -390,6 +208,131 @@ function chartData(stateData, chosenYear) {
     });
 
 
+    //stacked bar chart
+    //aqi days breakdown per county of filtered state 
+    var cotrace= {
+      x: county,
+      y: coDays,
+      name: "CO",
+      type: "bar",
+      width: 0.75,
+      marker: {
+        color: "#d966ff",
+        opacity: 0.75,
+      }
+    };
+
+    var no2trace = {
+      x: county,
+      y: no2Days,
+      name: "NO2",
+      type: "bar",
+      width: 0.75,
+      marker: {
+        color: "#1a75ff",
+        opacity: 0.75,
+      }
+    };
+
+    var ozonetrace = {
+      x: county,
+      y: ozoneDays,
+      name: "Ozone",
+      type: "bar",
+      width: 0.75,
+      marker: {
+        color:  "#2eb82e",
+        opacity: 0.75,
+      }
+    };
+
+    var so2trace = {
+      x: county,
+      y: so2Days,
+      name: "SO2",
+      type: "bar",
+      width: 0.75,
+      marker: {
+        color: "#ffff1a",
+        opacity: 0.75,
+      }
+    };
+
+    var pm2trace = {
+      x: county,
+      y: pm2Days,
+      name: "PM2.5",
+      type: "bar",
+      width: 0.75,
+      marker: {
+        color: "#ff6600",
+        opacity: 0.75,
+      }
+    };
+
+    var pm10trace = {
+      x: county,
+      y: pm10Days,
+      name: "PM10",
+      type: "bar",
+      width: 0.75,
+      marker: {
+        color: "#ff1a1a",
+        opacity: 0.75,
+      }
+    };
+
+    var povertytrace = {
+      x: county,
+      y: povertyPercent,
+      yaxis: 'y2',
+      name: "Poverty %",
+      type: "scatter",
+      marker: {
+        color: "black"
+      },
+      line: {
+        width: 2
+      }
+    };
+
+    var cancertrace = {
+      x: county,
+      y: cancer_pop,
+      yaxis: 'y2',
+      name: "Cancer Per 100K",
+      type: "scatter",
+      marker: {
+        color: "#ff0066"
+      },
+      line: {
+        width: 2
+      }
+    };
+
+    var data = [pm10trace, pm2trace, so2trace, ozonetrace, no2trace, cotrace, povertytrace, cancertrace];
+
+    var layout = {
+      autosize: false,
+      width: 1100,
+      height: 400,
+      barmode: "stack",
+      xaxis: {title: 'County'},
+      yaxis: {title: 'Days Contaminant Present'},
+      yaxis2: {
+        overlaying: 'y',
+        side: 'right'
+      },
+      legend: {
+        font: {
+          size: 10,
+        },
+      },
+      hovermode: 'closest'
+    };
+ 
+    Plotly.newPlot("bar", data, layout);
+ 
     //dot plot
     var hazardousDaysTrace = {
       x: hazardous_days,
@@ -464,10 +407,15 @@ function chartData(stateData, chosenYear) {
     }
 
     layout = {
-      title: "Count of Unhealthy to Hazardous Days Per County",
+      title: "Count of Day Classification Per County",
       width: 1100,
-      height: 600,
-      yaxis: {title: "County"},
+      height: 500,
+      xaxis: {
+        title:"Count of Classification",
+        showgrid: false,
+        showline: true,
+        ticks: 'outside',
+      },
       hovermode: 'closest',
       legend: {
         font: {

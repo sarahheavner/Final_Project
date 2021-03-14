@@ -20,21 +20,21 @@
     <h3 class="w3-bar-item"></h3>
     <a href="index.html" class="w3-bar-item w3-button w3-padding-16">Home</a>
     <a href="AQcancer.html" class="w3-bar-item w3-button w3-padding-16">Avg AQ & Cancer</a>
-    <a href="PovertyCancer.html" class="w3-bar-item w3-button w3-padding-16">Avg Poverty & Cancer</a>
+    <a href="PovertyCancer.html" class="w3-bar-item w3-button w3-padding-16">Avg Poverty & Cancer</a> <hr>
     <div class="row">
-        <div class="well">
-          <h5>Data Filter<h5><hr>
-          <select id="selDataset" onchange="stateOptionChanged(this.value)"></select><br>
-          <select id="selDataset2" onchange="yearOptionChanged(this.value)"></select>
-        </div>
+      <div class="well">
+        <h5>Data Filter<h5>
+        <select id="selDataset" onchange="stateOptionChanged(this.value)"></select><br>
+        <select id="selDataset2" onchange="yearOptionChanged(this.value)"></select>
       </div>
+    </div>
   </div>
         
   <!-- Page Content -->
   <div style="margin-left:15%">
     <div class="row">
       <div class="col-md-11">
-      <div class="title text">
+      <div class="title-text">
         <h1>Air Quality, Poverty, and Lung Cancer</h1>
         <div class="overview">
           <h4>Overview</h4>
@@ -51,7 +51,7 @@
       </div><hr>
 
       <div class="chart area">
-        <h4>Total AQI Days Per County</h4>
+        <h4>Total AQI Days</h4>
         <p>Total count of days with an air pollutant present at any readable amount for each county in the selected state and year.</p>
         <div class="chart-container" style="position: relative; height:45vh; width:60vw">
           <canvas id="polarArea"></canvas><hr>
@@ -60,7 +60,7 @@
           *NOTE* Presence of an air contaminant means just that - it was present in the air.
           It does not necessarily mean that air quality conditions were unhealthy or hazardous based on the classifications from the EPA.</p>  
         <div id="bar"></div> <hr>
-        <h4>Count of Select AQI Classification Days Per County</h4>
+        <h4>Count of AQI Day Classification</h4>
         <p>This chart visualizes the count of days per county that were classified as moderate, unhealthy for sensitive people, unhealthy, very unhealthy, or hazardous against the poverty rate. 
         This chart does not specify which contaminant was present at unhealthy or hazardous levels and does not include a count of days classified as good.
         </p>

@@ -7,7 +7,7 @@ h1 {
   padding-top: 50px;
 }
 
-/*overview*/
+/*main boddy*/
 h4 {
   font-size: 45px;
   font-weight: bold; 
@@ -21,6 +21,7 @@ p {
   margin-left: 7%;
 }
 
+
 /*chart area*/
 #polarArea {
   margin-left: 20%;
@@ -32,31 +33,31 @@ p {
 }
 
 #dot {
-  margin-left: 3%;
+  margin-left: 4%;
 }
 
 
 /*sidebar*/
 /*filter box formatting*/
 .well {
-    border: 0.5px solid;
     font-weight: bold;
-    font-size: 10px;
+    font-size: 15px;
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
     padding-left: 50px;
     padding-right: 51px;
 }
 
 #selDataset {
     font-size: 15px;
-    padding-left: 7px;
-    padding-right: 1px;
+    padding-left: 16px;
+    padding-right: 9px;
+    margin-bottom: 10px;
 }
 
 #selDataset2 {
     font-size: 15px;
+    padding-left: 10px;
+    padding-right: 7px;
 }
 
 
