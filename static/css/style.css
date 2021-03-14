@@ -7,7 +7,7 @@ h1 {
   padding-top: 50px;
 }
 
-/*main boddy*/
+/*main body*/
 h4 {
   font-size: 45px;
   font-weight: bold; 
@@ -16,6 +16,12 @@ h4 {
 }
 
 p {
+  font-size: 14px;
+  padding-top: 20px;
+  margin-left: 7%;
+}
+
+h6 {
   font-size: 14px;
   padding-top: 20px;
   margin-left: 7%;

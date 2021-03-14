@@ -76,37 +76,30 @@ function chartData(stateData) {
 
     console.log(county);
 
-    var avg_aqi_trace = {
-      x: county,
+    var bubbleTrace = {
       y: avg_aqi_days,
-      name: "AQI Days",
-      type: "bar",
+      x: pop_per_100k,
+      mode: "markers",
       marker: {
-        color: "blue"
-      }
+        size: pop_per_100k,
+        color: avg_aqi_days,
+      },
+      text: county
+    }
+
+    var bubbleData = [bubbleTrace];
+
+    var bubbleLayout = {
+      title: "Average AQI Days Vs. Cancer Rates",
+      hovermode: "closest",
+      width: 600,
+      height: 350,
+      xaxis: { title: "Lung Cancer Diagnoses Per 100k" },
+      yaxis: { title: "Avg AQI Days"}
     };
 
-    var pop_per_100k_trace = {
-      x: county,
-      y: pop_per_100k,
-      name: "Pop Per 100K",
-      type: "bar",
-      marker: {
-        color: "red",
-      }, 
-    };
-
-    var data = [avg_aqi_trace, pop_per_100k_trace];
-
-    var layout = {
-      autosize: false,
-      width: 500,
-      height: 500,
-      title: "Average AQI Days And Cancer Diagnoses per 100K",
-      yaxis: {title: 'Average AQI Days and Cancer Rates'},
-    };
-
-    Plotly.newPlot("bar1", data, layout);
+    //Plot bubble chart
+    Plotly.newPlot("bubble", bubbleData, bubbleLayout);
  
   });
 }
