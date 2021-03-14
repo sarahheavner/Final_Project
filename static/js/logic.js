@@ -274,6 +274,7 @@ function chartData(stateData, chosenYear) {
       width: 1100,
       height: 400,
       barmode: "stack",
+      xaxis: {title: 'County'},
       yaxis: {title: 'Days Contaminant Present'},
       yaxis2: {
         overlaying: 'y',
@@ -286,71 +287,71 @@ function chartData(stateData, chosenYear) {
 
     //scatter plot
     //count of days  with moderate to poor AQI vs poverty percentage for filtered stateData
-    var povertytrace = {
-      x: county,
-      y: povertyPercent,
-      name: "Poverty %",
-      type: "scatter",
-      marker: {
-        color: "black"
-      },
-    };
+    // var povertytrace = {
+    //   x: county,
+    //   y: povertyPercent,
+    //   name: "Poverty %",
+    //   type: "scatter",
+    //   marker: {
+    //     color: "black"
+    //   },
+    // };
 
-    var cancertrace = {
-      x: county,
-      y: cancer_pop,
-      name: "Cancer Per 100K",
-      type: "scatter",
-      marker: {
-        color: "#000080"
-      },
-    };
+    // var cancertrace = {
+    //   x: county,
+    //   y: cancer_pop,
+    //   name: "Cancer Per 100K",
+    //   type: "scatter",
+    //   marker: {
+    //     color: "#ff0066"
+    //   },
+    // };
 
-    var hazardousDaysTrace = {
-      x: county,
-      y: hazardous_days,
-      name: "Hazardous Days",
-      type: "scatter",
-      mode: 'markers',
-      marker: {size: 12}
-    };
+    // var hazardousDaysTrace = {
+    //   x: county,
+    //   y: hazardous_days,
+    //   name: "Hazardous Days",
+    //   type: "scatter",
+    //   mode: 'markers',
+    //   marker: {size: 12}
+    // };
 
-    var veryUnhealthyTrace = {
-      x: county,
-      y: very_unhealthy_days,
-      name: "Very Unhealthy Days",
-      type: "scatter",
-      mode: 'markers',
-      marker: {size: 12}
-    }
+    // var veryUnhealthyTrace = {
+    //   x: county,
+    //   y: very_unhealthy_days,
+    //   name: "Very Unhealthy Days",
+    //   type: "scatter",
+    //   mode: 'markers',
+    //   marker: {size: 12}
+    // }
 
-    var unhealthyTrace = {
-      x: county, 
-      y: unhealthy_days,
-      name: "Unhealthy Days",
-      type: "scatter", 
-      mode: 'markers',
-      marker: {size: 12}
-    }
+    // var unhealthyTrace = {
+    //   x: county, 
+    //   y: unhealthy_days,
+    //   name: "Unhealthy Days",
+    //   type: "scatter", 
+    //   mode: 'markers',
+    //   marker: {size: 12}
+    // }
 
-    var unhealthySensitiveTrace = {
-      x: county,
-      y: unhealthy_sensitive_days,
-      name: "Unhealthy Sensitive Days",
-      type: "scatter",
-      mode: 'markers',
-      marker: {size: 12}
-    }
+    // var unhealthySensitiveTrace = {
+    //   x: county,
+    //   y: unhealthy_sensitive_days,
+    //   name: "Unhealthy Sensitive Days",
+    //   type: "scatter",
+    //   mode: 'markers',
+    //   marker: {size: 12}
+    // }
 
 
-    layout = {
-      title: "Count of Unhealthy to Hazardous Days Per County",
-      yaxis: {title: "Days Per Classification"}
-    }
+    // layout = {
+    //   title: "Count of Unhealthy to Hazardous Days Per County",
+    //   yaxis: {title: "Days Per Classification"}
+    // }
 
-    var scatterdata = [povertytrace, cancertrace, hazardousDaysTrace, veryUnhealthyTrace, unhealthyTrace, unhealthySensitiveTrace]
+    // var scatterdata = [povertytrace, cancertrace, hazardousDaysTrace, veryUnhealthyTrace, unhealthyTrace, unhealthySensitiveTrace]
 
-    Plotly.newPlot('line', scatterdata, layout);
+    // Plotly.newPlot('line', scatterdata, layout);
 
 
     //polar area chart 
@@ -387,6 +388,98 @@ function chartData(stateData, chosenYear) {
       type: 'polarArea',
       data: polarData2
     });
+
+
+    //dot plot
+    var hazardousDaysTrace = {
+      x: hazardous_days,
+      y: county,
+      name: "Hazardous",
+      type: "scatter",
+      mode: 'markers',
+      marker: {
+        size: 10,
+        color: 'red'
+      }
+    };
+
+    var veryUnhealthyTrace = {
+      x: very_unhealthy_days,
+      y: county,
+      name: "Very Unhealthy",
+      type: "scatter",
+      mode: 'markers',
+      marker: {
+        size: 10,
+        color: '#ff66a3'
+      }
+    }
+
+    var unhealthyTrace = {
+      x: unhealthy_days,
+      y: county,
+      name: "Unhealthy",
+      type: "scatter", 
+      mode: 'markers',
+      marker: {
+        size: 10,
+        color: 'orange'
+      }
+    }
+
+    var unhealthySensitiveTrace = {
+      x: unhealthy_sensitive_days,
+      y: county,
+      name: "Unhealthy Sensitive",
+      type: "scatter",
+      mode: 'markers',
+      marker: {
+        size: 10,
+        color: 'green'
+      }
+    }
+
+    var moderateTrace = {
+      x: moderate_days,
+      y: county,
+      name: "Moderate",
+      type: "scatter",
+      mode: 'markers',
+      marker: {
+        size: 10,
+        color: 'blue'
+      }
+    }
+
+    var goodTrace = {
+      x: good_days,
+      y: county,
+      name: "Good",
+      type: "scatter",
+      mode: 'markers',
+      marker: {
+        size: 10,
+        color: '#800060'
+      }
+    }
+
+    layout = {
+      title: "Count of Unhealthy to Hazardous Days Per County",
+      width: 1100,
+      height: 600,
+      yaxis: {title: "County"},
+      hovermode: 'closest',
+      legend: {
+        font: {
+          size: 10,
+        },
+      }
+    }
+
+    var scatterdata = [hazardousDaysTrace, veryUnhealthyTrace, unhealthyTrace, unhealthySensitiveTrace, moderateTrace, goodTrace]
+
+    Plotly.newPlot('dot', scatterdata, layout);
+
   });
 }
 
