@@ -73,9 +73,9 @@ function chartData(stateData) {
         pop_per_100k.push(initialChart[i].pop_per_100k);
       };
     
-
-    console.log(county);
-
+    
+    //initial charts
+    //bubble chart - AVG AQI DAYS VS CANCER RATES
     var bubbleTrace = {
       y: avg_aqi_days,
       x: pop_per_100k,
@@ -98,8 +98,10 @@ function chartData(stateData) {
       yaxis: { title: "Avg AQI Days"}
     };
 
-    //Plot bubble chart
     Plotly.newPlot("bubble", bubbleData, bubbleLayout);
+
+
+
  
   });
 }
