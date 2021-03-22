@@ -27,7 +27,7 @@
           <h5>Data Filter<h5>
           <select id="selDataset" onchange="stateOptionChanged(this.value)"></select><br>
         </div>
-      </div>
+      </div><hr>
   </div>
 
   <!-- Page Content -->
@@ -35,15 +35,30 @@
     <div class="row">
       <div class="col-md-11">
         <div class="main-text">
-          <h1>Average Air Quality and Cancer Data<h1>
-
-        <div class="col-md-5">
-            <div id="bubble"></div>
+          <h1>Average AQI Days by Classification and Lung Cancer</h1>
         </div>
-        <div class="col-md-5">
-          <div id=""></div>
+
+        <div class="chart area">
+          <div id="bubble"></div><hr>
+          <div class="day-classification">
+            <div class="row">
+              <div id="good-bar"></div>
+              <div id="moderate-bar"></div>
+            </div>
+            <div class="row">
+              <div id="us-bar"></div>
+              <div id="unhealthy-bar"></div>
+            </div>
+            <div class="row">
+              <div id="vu-bar"></div>
+              <div id="hazardous-bar"></div>
+            </div>
+          </div>
+        
+        </div>
       </div>
-      </div>
+    </div>
+  </div>
 
 
 

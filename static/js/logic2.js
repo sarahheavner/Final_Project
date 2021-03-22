@@ -74,37 +74,182 @@ function chartData(stateData) {
       };
     
     
-    //initial charts
-    //bubble chart - AVG AQI DAYS VS CANCER RATES
-    var bubbleTrace = {
-      y: avg_aqi_days,
-      x: pop_per_100k,
-      mode: "markers",
-      marker: {
-        size: pop_per_100k,
-        color: avg_aqi_days,
-      },
-      text: county
-    }
+      //initial charts
+      //bubble chart - AVG AQI DAYS VS CANCER RATES
+      var bubbleTrace = {
+        x: avg_aqi_days,
+        y: pop_per_100k,
+        mode: "markers",
+        marker: {
+          size: pop_per_100k,
+          color: avg_aqi_days,
+        },
+        text: county
+      }
 
-    var bubbleData = [bubbleTrace];
+      var bubbleData = [bubbleTrace];
 
-    var bubbleLayout = {
-      title: "Average AQI Days Vs. Cancer Rates",
-      hovermode: "closest",
-      width: 600,
-      height: 350,
-      xaxis: { title: "Lung Cancer Diagnoses Per 100k" },
-      yaxis: { title: "Avg AQI Days"}
-    };
+      var bubbleLayout = {
+        title: "Total Average AQI Days Vs. Lung Cancer Rates",
+        hovermode: "closest",
+        // width: 600,
+        // height: 350,
+        yaxis: { title: "Lung Cancer Rate Per 100k" },
+        xaxis: { title: "Avg AQI Days"}
+      };
 
-    Plotly.newPlot("bubble", bubbleData, bubbleLayout);
+      Plotly.newPlot("bubble", bubbleData, bubbleLayout);
+
+      //AVG DAY CLASS VS CANCER RATES
+      //good days
+      var avg_goodTrace = {
+        x: avg_good_days,
+        y: county,
+        type: "bar",
+        orientation: 'h',
+        marker: { 
+          color: "#a64dff",
+          opacity: 0.8
+        }
+      };
+
+      var goodData = [avg_goodTrace];
+
+      var goodLayout = {
+        title: "Avg Good Days Vs. Lung Cancer Rates",
+        yaxis: { title: "County" },
+        xaxis: { title: "Avg Good Days" },
+        width: 500,
+        height: 450
+      };
+
+      Plotly.newPlot("good-bar", goodData, goodLayout);
+
+      //moderate days
+      var avg_moderateTrace = {
+        x: avg_moderate_days,
+        y: county,
+        type: "bar",
+        orientation: 'h',
+        marker: { 
+          color: "#a64dff",
+          opacity: 0.8
+        }
+      };
+
+      var moderateData = [avg_moderateTrace];
+
+      var moderateLayout = {
+        title: "Avg Moderate Days Vs. Lung Cancer Rates",
+        yaxis: { title: "County" },
+        xaxis: { title: "Avg Moderate Days" },
+        width: 500,
+        height: 450
+      };
+
+      Plotly.newPlot("moderate-bar", moderateData, moderateLayout);
+
+      //unhealthy sensitive days
+      var avg_usTrace = {
+        x: avg_unhealthy_sensitive_days,
+        y: county,
+        type: "bar",
+        orientation: 'h',
+        marker: { 
+          color: "#a64dff",
+          opacity: 0.8
+        }
+      };
+
+      var usData = [avg_usTrace];
+
+      var usLayout = {
+        title: "Avg Unhealthy Sensitive Days Vs. Lung Cancer Rates",
+        yaxis: { title: "County" },
+        xaxis: { title: "Avg Unhealthy Sensitive Days" },
+        width: 500,
+        height: 450
+      };
+
+      Plotly.newPlot("us-bar", usData, usLayout);
+
+      //unhealthy days 
+      var avg_unhealthyTrace = {
+        x: avg_unhealthy_days,
+        y: county,
+        type: "bar",
+        orientation: 'h',
+        marker: { 
+          color: "#a64dff",
+          opacity: 0.8
+        }
+      };
+
+      var unhealthyData = [avg_unhealthyTrace];
+
+      var unhealthyLayout = {
+        title: "Avg Unhealthy Days Vs. Lung Cancer Rates",
+        yaxis: { title: "County" },
+        xaxis: { title: "Avg Unhealthy Days" },
+        width: 500,
+        height: 450
+      };
+
+      Plotly.newPlot("unhealthy-bar", unhealthyData, unhealthyLayout);
+
+      //very unhealthy days 
+      var avg_vuTrace = {
+        x: avg_very_unhealthy_days,
+        y: county,
+        type: "bar",
+        orientation: 'h',
+        marker: { 
+          color: "#a64dff",
+          opacity: 0.8
+        }
+      };
+
+      var vuData = [avg_vuTrace];
+
+      var vuLayout = {
+        title: "Avg Very Unhealthy Days Vs. Lung Cancer Rates",
+        yaxis: { title: "County" },
+        xaxis: { title: "Avg Very Unhealthy Days" },
+        width: 500,
+        height: 450
+      };
+
+      Plotly.newPlot("vu-bar", vuData, vuLayout);
+
+      //hazardous days 
+      var avg_hazardousTrace = {
+        x: avg_hazardous_days,
+        y: county,
+        type: "bar",
+        orientation: 'h',
+        marker: { 
+          color: "#a64dff",
+          opacity: 0.8
+        }
+      };
+
+      var hazardousData = [avg_hazardousTrace];
+
+      var hazardousLayout = {
+        title: "Avg Hazardous Days Vs. Lung Cancer Rates",
+        yaxis: { title: "County" },
+        xaxis: { title: "Avg Hazardous Days" },
+        width: 500,
+        height: 450
+      };
+
+      Plotly.newPlot("hazardous-bar", hazardousData, hazardousLayout);
 
 
 
- 
-  });
-}
+  
+    });
+  }
 
 
 

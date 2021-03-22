@@ -66,6 +66,34 @@ h6 {
     padding-right: 7px;
 }
 
+/*AQcancer.html*/
+#good-bar {
+  padding-left: 65px;
+}
+
+#moderate-bar {
+  padding-left: 10px;
+}
+
+#us-bar {
+  padding-left: 65px;
+}
+
+#unhealthy-bar {
+  padding-left: 10px;
+}
+
+#vu-bar {
+  padding-left: 65px;
+}
+
+#hazardous-bar {
+  padding-left: 10px;
+}
+
+
+
+
 
 
 
