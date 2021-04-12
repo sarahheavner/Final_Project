@@ -41,20 +41,43 @@ function chartData(stateData) {
       //create empty lists for variables
       var county = [];
       var avg_poverty = [];
-      var cancer_pop = [];
+      var pop_per_100k = [];
 
       for (var i = 0; i < initialChart.length; i++) {
           county.push(initialChart[i].county);
           avg_poverty.push(initialChart[i].avg_poverty_percentage);
-          cancer_pop.push(initialChart[i].pop_per_100k);
+          pop_per_100k.push(initialChart[i].pop_per_100k);
+
+          console.log(county);
+          console.log(avg_poverty);
+          console.log(pop_per_100k);
+      }
+      
+      //initial charts
+      //bubble chart - AVG AQI DAYS VS CANCER RATES
+      var bubbleTrace = {
+        x: avg_poverty,
+        y: pop_per_100k,
+        mode: "markers",
+        marker: {
+          color: pop_per_100k,
+          size: avg_poverty,
+        },
+        text: county
       }
 
+      var bubbleData = [bubbleTrace];
 
+      var bubbleLayout = {
+        title: "Avg Poverty Percent Vs. Lung Cancer Rates",
+        hovermode: "closest",
+        // width: 600,
+        // height: 350,
+        yaxis: { title: "Lung Cancer Rate Per 100k" },
+        xaxis: { title: "Avg Poverty Percent"}
+      };
 
-
-
-
-
+      Plotly.newPlot("bubble", bubbleData, bubbleLayout);
 
     });
 }
