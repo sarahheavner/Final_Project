@@ -106,14 +106,26 @@ function chartData(stateData) {
         x: avg_good_days,
         y: county,
         type: "bar",
+        name: "Day Count",
         orientation: 'h',
         marker: { 
           color: "#a64dff",
           opacity: 0.8
         }
       };
+      
+      var cancerTrace = {
+        x: pop_per_100k,
+        y: county,
+        type: "scatter",
+        mode: "line",
+        name: "Cancer Rate",
+        marker: {
+          color: "black",
+        }
+      };
 
-      var goodData = [avg_goodTrace];
+      var goodData = [avg_goodTrace, cancerTrace];
 
       var goodLayout = {
         title: "Avg Good Days Vs. Lung Cancer Rates",
@@ -130,6 +142,7 @@ function chartData(stateData) {
         x: avg_moderate_days,
         y: county,
         type: "bar",
+        name: "Day Count",
         orientation: 'h',
         marker: { 
           color: "#a64dff",
@@ -137,7 +150,18 @@ function chartData(stateData) {
         }
       };
 
-      var moderateData = [avg_moderateTrace];
+      var cancerTrace = {
+        x: pop_per_100k,
+        y: county,
+        type: "scatter",
+        mode: "line",
+        name: "Cancer Rate",
+        marker: {
+          color: "black",
+        }
+      };
+
+      var moderateData = [avg_moderateTrace, cancerTrace];
 
       var moderateLayout = {
         title: "Avg Moderate Days Vs. Lung Cancer Rates",
@@ -154,6 +178,7 @@ function chartData(stateData) {
         x: avg_unhealthy_sensitive_days,
         y: county,
         type: "bar",
+        name: "Day Count",
         orientation: 'h',
         marker: { 
           color: "#a64dff",
@@ -161,7 +186,18 @@ function chartData(stateData) {
         }
       };
 
-      var usData = [avg_usTrace];
+      var cancerTrace = {
+        x: pop_per_100k,
+        y: county,
+        type: "scatter",
+        mode: "line",
+        name: "Cancer Rate",
+        marker: {
+          color: "black",
+        }
+      };
+
+      var usData = [avg_usTrace, cancerTrace];
 
       var usLayout = {
         title: "Avg Unhealthy Sensitive Days Vs. Lung Cancer Rates",
@@ -178,6 +214,7 @@ function chartData(stateData) {
         x: avg_unhealthy_days,
         y: county,
         type: "bar",
+        name: "Day Count",
         orientation: 'h',
         marker: { 
           color: "#a64dff",
@@ -185,7 +222,18 @@ function chartData(stateData) {
         }
       };
 
-      var unhealthyData = [avg_unhealthyTrace];
+      var cancerTrace = {
+        x: pop_per_100k,
+        y: county,
+        type: "scatter",
+        mode: "line",
+        name: "Cancer Rate",
+        marker: {
+          color: "black",
+        }
+      };
+
+      var unhealthyData = [avg_unhealthyTrace, cancerTrace];
 
       var unhealthyLayout = {
         title: "Avg Unhealthy Days Vs. Lung Cancer Rates",
@@ -202,6 +250,7 @@ function chartData(stateData) {
         x: avg_very_unhealthy_days,
         y: county,
         type: "bar",
+        name: "Day Count",
         orientation: 'h',
         marker: { 
           color: "#a64dff",
@@ -209,7 +258,18 @@ function chartData(stateData) {
         }
       };
 
-      var vuData = [avg_vuTrace];
+      var cancerTrace = {
+        x: pop_per_100k,
+        y: county,
+        type: "scatter",
+        mode: "line",
+        name: "Cancer Rate",
+        marker: {
+          color: "black",
+        }
+      };
+
+      var vuData = [avg_vuTrace, cancerTrace];
 
       var vuLayout = {
         title: "Avg Very Unhealthy Days Vs. Lung Cancer Rates",
@@ -226,6 +286,7 @@ function chartData(stateData) {
         x: avg_hazardous_days,
         y: county,
         type: "bar",
+        name: "Day Count",
         orientation: 'h',
         marker: { 
           color: "#a64dff",
@@ -233,7 +294,18 @@ function chartData(stateData) {
         }
       };
 
-      var hazardousData = [avg_hazardousTrace];
+      var cancerTrace = {
+        x: pop_per_100k,
+        y: county,
+        type: "scatter",
+        mode: "line",
+        name: "Cancer Rate",
+        marker: {
+          color: "black",
+        }
+      };
+
+      var hazardousData = [avg_hazardousTrace, cancerTrace];
 
       var hazardousLayout = {
         title: "Avg Hazardous Days Vs. Lung Cancer Rates",
@@ -244,10 +316,6 @@ function chartData(stateData) {
       };
 
       Plotly.newPlot("hazardous-bar", hazardousData, hazardousLayout);
-
-
-
-  
     });
   }
 
